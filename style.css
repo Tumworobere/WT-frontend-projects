@@ -2,7 +2,7 @@
 :root {
   --light-gray: hsl(0, 0%, 81%);
   --light-grayish-blue: hsl(210, 46%, 95%);
-  --moderate-violet: hsl(263, 55%, 52%);
+  --modarate-violet: hsl(263, 55%, 52%);
   --dark-grayish-blue: hsl(217, 19%, 35%);
   --dark-blackish-blue: hsl(219, 29%, 14%);
   --white: hsl(0, 0%, 100%);
@@ -70,11 +70,12 @@ body::-webkit-scrollbar {
 }
 
 .section-1 {
+  background-image: url("images/bg-pattern-quotation.svg");
   background-repeat: no-repeat;
   background-position: top right 18%;
   background-size: 100px;
   grid-column: span 2;
-  background-color: var(--moderate-violet);
+  background-color: var(--modarate-violet);
 }
 .section-2 {
   background-color: var(--dark-grayish-blue);
@@ -111,11 +112,11 @@ body::-webkit-scrollbar {
   color: var(--dark-grayish-blue);
 }
 
-.author-description,
+.author-describtion,
 .content {
   opacity: 50%;
 }
-.author-description {
+.author-describtion {
   font-size: 11px;
 }
 
@@ -125,10 +126,6 @@ body::-webkit-scrollbar {
   border-radius: 50%;
   width: 2.5rem;
   height: 2.5rem;
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  -ms-border-radius: 50%;
-  -o-border-radius: 50%;
 }
 
 .section-1 .author-img,
@@ -138,15 +135,14 @@ body::-webkit-scrollbar {
 }
 
 .section-5 .author-img {
-  border-color: var(--moderate-violet);
+  border-color: var(--modarate-violet);
 }
 
 .section-1 .author-img {
   border-color: var(--light-white);
 }
 
-/** Highlight Content **/
-
+/** Hightlight Content **/
 .highlight-content {
   font-size: 1.5rem;
   word-spacing: 1.7px;
@@ -162,6 +158,8 @@ body::-webkit-scrollbar {
   padding-top: 0.4rem;
   line-height: 1.4rem;
 }
+
+/** Responsive **/
 
 @media screen and (max-width: 1201px) {
   .testimonials-section {
@@ -180,6 +178,13 @@ body::-webkit-scrollbar {
 @media screen and (max-width: 801px) {
   .testimonials-section > * {
     grid-column: span 4;
+    grid-row: span 1;
+  }
+}
+
+@media screen and (min-width: 601px) and (max-width: 800px) {
+  .testimonials-section > * {
+    grid-column: span 2;
     grid-row: span 1;
   }
 }
